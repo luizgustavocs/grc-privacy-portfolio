@@ -3,9 +3,14 @@
 FROM python:3.13-slim AS builder
 WORKDIR /build
 COPY requirements.txt .
-RUN python -m venv /venv && /venv/bin/pip install --no-cache-dir -r requirements.txt
+RUN python -m venv /venv && /venv/bin/pip install --no-cache-dir -r requirements.txt \
+    && /venv/bin/pip uninstall -y pip
 
 FROM python:3.13-slim
+# The runtime installs nothing, so pip and ensurepip (and the libraries they
+# vendor, such as urllib3 and msgpack) are removed to shrink the attack surface
+RUN python -m pip uninstall -y pip \
+    && rm -rf /usr/local/lib/python3.13/ensurepip /usr/local/bin/pip*
 LABEL org.opencontainers.image.source="https://github.com/luizgustavocs/grc-privacy-portfolio"
 LABEL org.opencontainers.image.description="VitaClin appointments API (fictitious), DevSecOps lab"
 RUN useradd --system --uid 10001 --no-create-home app
