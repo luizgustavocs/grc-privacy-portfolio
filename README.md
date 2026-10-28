@@ -1,6 +1,6 @@
 # Privacy & GRC Portfolio
 
-Hands-on privacy (LGPD / GDPR) and governance, risk and compliance (GRC) work by **Luiz Gustavo Costa e Silva**, a Brazilian lawyer (OAB) and software developer focused on data protection, information security governance and compliance automation.
+Hands-on privacy (LGPD / GDPR), governance, risk and compliance (GRC) and DevSecOps work by **Luiz Gustavo Costa e Silva**, a Brazilian lawyer (OAB) and software developer focused on data protection, information security governance and compliance automation.
 
 All exercises use **VitaClin**, a **fictitious** health-tech company (see [`00-company/`](00-company/)). Real client work appears only in [`05-case-studies/`](05-case-studies/), anonymised and published with the client's authorisation. No real personal data is stored in this repository.
 
@@ -14,6 +14,7 @@ All exercises use **VitaClin**, a **fictitious** health-tech company (see [`00-c
 | [`03-security-grc/`](03-security-grc/) | ISO/IEC 27001 gap analysis and Statement of Applicability, risk register, security policies, vendor assessment | ISO/IEC 27001, 27002, 27701, 31000, 27005, NIST CSF 2.0 |
 | [`04-grc-engineering/`](04-grc-engineering/) | Python evidence collector mapping automated checks to ISO/IEC 27002 controls | Compliance as code |
 | [`05-case-studies/`](05-case-studies/) | Anonymised real engagements | |
+| [`06-devsecops/`](06-devsecops/) | Secure software supply chain lab: secret scanning, SAST, dependency and image scanning, SBOM, keyless image signing, each stage mapped to ISO/IEC 27002 controls | NIST SSDF, ISO/IEC 27002, OWASP |
 
 ## Related work
 
